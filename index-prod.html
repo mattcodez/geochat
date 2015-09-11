@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<link rel="stylesheet" href="clientlibs/main.css" />
+	
+	<script src="clientlibs/client.min.js"></script>
+	<script src="clientlibs/socket.io.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+</head>
+
+<body>
+
+<div id="mainChat" data-role="page" data-theme="b">
+	<div data-role="header" data-theme="b" class='header'>
+		<a id="welcomeDialogLink" href="#welcomeDialog" data-rel="dialog" class="ui-btn-left">About</a>
+		<h1>Geochat</h1>
+		<a id="cStatus" class="off ui-btn-right">Offline</a>
+	</div>
+	
+	<div data-role="content" class="messages">
+		<ul id="messages" data-role="listview"></ul>
+	</div>
+	
+	<div data-role="footer" data-theme="b" class="footer">
+		<input type="text" id="msg" name="msg" />
+		<a href="#" id="sendMsg" data-role="button" style="display:block">Send</a>
+	</div>
+</div>
+
+<div id="welcomeDialog" data-role="dialog">
+	<div data-role="header" class="ui-corner-top ui-overlay-shadow ui-header ui-bar-e">
+		<h1>Welcome to Geochat!</h1>
+	</div>
+	
+	<div data-role="content">
+		<p>Geochat allows you to anonymously talk with others close to you in real-time.</p>
+		<p>Allow our location updates from your phone and everyone within 15km(9mi) will be able to see what you say here
+		and reply back to you!</p>
+		<p>Contact: <a href="mailto:xhr@io2g.com">xhr@io2g.com</a></p>
+		<a href="#mainChat" data-rel="back" data-role="button">OK</a>
+	</div>
+</div>
+
+<script>$(document).ready(initApp);</script>
+
+</body>
+</html>
